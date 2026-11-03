@@ -1,0 +1,9 @@
+{
+  "appId": "com.agriverse.mobile",
+  "appName": "AgriVerse",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

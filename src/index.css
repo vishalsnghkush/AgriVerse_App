@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-forest-green: #1B4332;
+  --app-dark-forest: #081C15;
+  --app-mint: #D8F3DC;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  padding-bottom: env(safe-area-inset-bottom, 80px);
+}
+
+/* Light Theme: Soft Pastel Blush Pink Background (Studify aesthetic) with 100% Crisp Dark Text */
+body.light-theme,
+html:not(.dark) body {
+  background-color: #FFF2F5 !important; /* Soft blush pink Studify tone */
+  color: #111827 !important;            /* High-contrast deep black */
+}
+
+/* Dark Theme: Deep Midnight Forest with Emerald Accents */
+body.dark-theme,
+html.dark body {
+  background-color: #06120E !important;
+  color: #FFFFFF !important;
+}
+
+/* Guaranteed High-Contrast Light Mode Text Rules */
+html:not(.dark) .light-card,
+html:not(.dark) .bg-white {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+}
+
+html:not(.dark) .light-card h1,
+html:not(.dark) .light-card h2,
+html:not(.dark) .light-card h3,
+html:not(.dark) .light-card h4,
+html:not(.dark) .bg-white h1,
+html:not(.dark) .bg-white h2,
+html:not(.dark) .bg-white h3,
+html:not(.dark) .bg-white h4 {
+  color: #111827 !important;
+}
+
+html:not(.dark) .light-card p,
+html:not(.dark) .bg-white p {
+  color: #374151 !important;
+}
+
+html:not(.dark) .light-card span:not([class*="text-emerald"]):not([class*="text-red"]):not([class*="text-amber"]):not([class*="text-white"]),
+html:not(.dark) .bg-white span:not([class*="text-emerald"]):not([class*="text-red"]):not([class*="text-amber"]):not([class*="text-white"]) {
+  color: #1F2937 !important;
+}
+
+html:not(.dark) input,
+html:not(.dark) select {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #F8B4C4 !important;
+}
+
+html:not(.dark) input::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Dark theme specific overrides */
+.dark-theme .card-sunlight,
+.dark-theme .app-card {
+  background-color: #0D2218 !important;
+  border-color: #1F4A37 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark-theme .card-sunlight h2,
+.dark-theme .card-sunlight h3,
+.dark-theme .app-card h2,
+.dark-theme .app-card h3 {
+  color: #52B788 !important;
+}
+
+.dark-theme .card-sunlight p,
+.dark-theme .app-card p {
+  color: #D8F3DC !important;
+}
+
+/* Scanner Laser Sweep */
+@keyframes laserSweep {
+  0% { top: 5%; opacity: 0.8; }
+  50% { top: 90%; opacity: 1; }
+  100% { top: 5%; opacity: 0.8; }
+}
+
+.animate-scanner-laser {
+  animation: laserSweep 2s ease-in-out infinite;
+}
